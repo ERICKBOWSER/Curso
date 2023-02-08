@@ -26,7 +26,7 @@ public class ImprimirNumero {
     
     public static void factorial(int num){
         for(int i = 0; i < num; i++){
-            num * (num - 1);
+            //num * (num - 1);
         }
     }
     
