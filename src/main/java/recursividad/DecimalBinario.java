@@ -14,16 +14,16 @@ public class DecimalBinario {
 
 
 
-    public static int decBinario(int n){
-        ArrayList<Integer> res = new ArrayList<>();
-        
-        do{
-            
-            
-            
-        }while(n != 0 || n != 1);
-        
-    }
+//    public static int decBinario(int n){
+//        ArrayList<Integer> res = new ArrayList<>();
+//        
+//        do{
+//            
+//            
+//            
+//        }while(n != 0 || n != 1);
+//        
+//    }
 }
 
 
