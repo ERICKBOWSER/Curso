@@ -13,16 +13,15 @@ import java.util.ArrayList;
 public class DecimalBinario {
 
 
-
-//    public static int decBinario(int n){
+//
+//    public ArrayList<Integer> int decBinario(int n){
 //        ArrayList<Integer> res = new ArrayList<>();
-//        
+//        int n = 50;
 //        do{
-//            
-//            
+//            res.add(n % 2);           
 //            
 //        }while(n != 0 || n != 1);
-//        
+//        return res;
 //    }
 }
 
