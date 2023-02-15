@@ -20,7 +20,7 @@ public class MatrizAleatorios {
     */
     public Random generador = new Random();
     public Scanner teclado = new Scanner(System.in);
-    public int numero = 8;
+    public static int numero = 8;
     
     private ArrayList<Integer> array = new ArrayList<>();
     
@@ -36,9 +36,10 @@ public class MatrizAleatorios {
         // Recorremos la matriz y rellenamos con ceros
         for(int[] fila : matriz){
             System.out.println();
-            for(int z : fila){
-                //matriz[fila][z] = generarNumeros(); // No se puede porque int[] no se puede convertir en int ???????????!
+            for(int columna : fila){
+                //matriz[fila][columna] = generarNumeros(numero); // No se puede porque int[] no se puede convertir en int ???????????!
                 System.out.print(generarNumeros(numero) + " "); // Técnicamente no estamos añadiendo los datos en la matriz, solo lo estamos imprimiendo en esa posición
+
             }
         }
     }   
@@ -61,12 +62,21 @@ public class MatrizAleatorios {
     public static int generarNumeros(int numero){
         int num = (int)(Math.random()* Math.pow(numero, 2) + 1);
         
-        //array.add(num);
-        
-        //System.out.println("Numero random " + num);
         return num;
     }
     
+    // Descartado    
+//    public static ArrayList<Integer> generarNumeros(int numero){
+//        
+//        ArrayList<Integer> array = new ArrayList<>();
+//        
+//        int num = (int)(Math.random()* Math.pow(numero, 2) + 1);
+//        
+//        array.add(num);
+//        
+//        //System.out.println("Numero random " + num);
+//        return array;
+//    }
     
     
     
