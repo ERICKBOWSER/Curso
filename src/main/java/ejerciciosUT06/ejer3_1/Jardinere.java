@@ -4,23 +4,26 @@
  */
 package ejerciciosUT06.ejer3_1;
 
+import java.util.Map;
+
 /**
  *
  * @author ERICK
  */
 public class Jardinere extends Empleado {
-    private int antiguedad;
+    private Integer antiguedad;
+    Map<Integer, Jardinere> jardinere; 
 
     public Jardinere(int antiguedad, double salario, String nombre, String nif, int edad) {
         super(salario, nombre, nif, edad);
         this.antiguedad = antiguedad;
     }
 
-    public int getAntiguedad() {
+    public Integer getAntiguedad() {
         return antiguedad;
     }
 
-    public void setAntiguedad(int antiguedad) {
+    public void setAntiguedad(Integer antiguedad) {
         this.antiguedad = antiguedad;
     }
 
@@ -45,4 +48,10 @@ public class Jardinere extends Empleado {
         final Jardinere other = (Jardinere) obj;
         return this.antiguedad == other.antiguedad;
     }
+    
+    @Override
+    public int compareTo(Persona o){
+        return Integer.compare(this.antiguedad, ((Jardinere) o).antiguedad); // Se hace un casting de datos ya que Persona no tiene el parametro antiguedad del jardinere
+    }
+        // Se puede hacer todo desde la clase persona, pero si se quiere un dato especifico hay que acceder a esas clases y puede dar fallo si se hace un casting
 }
