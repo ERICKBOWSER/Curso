@@ -13,7 +13,7 @@ import java.util.TreeMap;
  */
 // Puede haber clases abstractas y no recibir metodos abstractos
 
-public abstract class Persona implements Comparable<Persona>{ // Clases abstractas: no se pueden instanciar, solo instancian las clases hijas
+public class Persona implements Comparable<Persona>{ // Clases abstractas: no se pueden instanciar, solo instancian las clases hijas
     private String nombre;
     private String nif;
     private int edad;
