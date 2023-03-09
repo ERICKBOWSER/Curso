@@ -10,9 +10,9 @@ package recursividad;
  */
 public class ImprimirNumero {
     public static void main(String[] args) {
-        //imprimirNumeroRecursivo(5);
+        imprimirNumeroRecursivo(5);
         
-        factorial(4);
+        //factorial(4);
     }
     
     public static void imprimirNumeroRecursivo(int numero){

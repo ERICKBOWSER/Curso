@@ -17,7 +17,7 @@ public class Triangulo extends Figura{
     public double calcularArea(){
         double resultado = 0;
         
-        resultado = (2 * Math.pow(base, 2)) / altura;
+        resultado = (getBase() * getAltura()) / 2;
         
         return resultado;        
     }

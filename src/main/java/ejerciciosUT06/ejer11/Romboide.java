@@ -14,11 +14,7 @@ public class Romboide extends Figura{
         super(base, altura);
     }
     
-    public double calcularArea(){
-        double resultado = 0;
-        
-        resultado = base * altura;
-        
-        return resultado;        
+    public double calcularArea(){        
+        return getBase() * getAltura();        
     }
 }
