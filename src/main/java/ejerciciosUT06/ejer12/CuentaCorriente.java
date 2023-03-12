@@ -9,7 +9,7 @@ package ejerciciosUT06.ejer12;
  * @author ERICK
  */
 public class CuentaCorriente extends Cuenta{
-    private final double INTERES = 1.5;
+    private final double INTERES = 1.5; // Como es final se puede colocar public ya que no va a cambiar nunca.
     private double saldoMin;
 
     public CuentaCorriente(double saldoMin, Cliente cliente) {

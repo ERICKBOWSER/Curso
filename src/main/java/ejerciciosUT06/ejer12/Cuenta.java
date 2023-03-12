@@ -46,7 +46,7 @@ public abstract class Cuenta {
         this.cliente = cliente;
     }
     
-    public String generarNumCuenta(){
+    private String generarNumCuenta(){
         String numero = RandomStringUtils.randomNumeric(20);
         
         return numero;
@@ -55,5 +55,10 @@ public abstract class Cuenta {
     public abstract void actualizarSaldo();
     
     public abstract void retirar(double retirar);
+
+    @Override
+    public String toString() {
+        return "Cuenta{" + "numeroCuenta=" + numeroCuenta + ", saldo=" + saldo + ", cliente=" + cliente + '}';
+    }
     
 }
