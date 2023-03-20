@@ -16,8 +16,8 @@ public abstract class Empleado implements Comparable<Empleado>{
     private final String NIF;
     private String nombre;
 
-    public Empleado(String nombre) {
-        this.NIF = calcularNif();
+    public Empleado(String nombre, String nif) {
+        this.NIF = nif;
         this.nombre = nombre;
     }
 
@@ -52,22 +52,25 @@ public abstract class Empleado implements Comparable<Empleado>{
     }
     
        
-    private String calcularNif(){
-        
-        Random generar = new Random();
-        int nums = generar.nextInt(8);
-        
-        int divNum = (int)nums % 23;
-        
-        String[] letras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
-        
-        String res = letras[divNum];
-        
-        return res;
-    }
+//    private String calcularNif(){
+//        
+//        Random generar = new Random();
+//        int nums = generar.nextInt(8);
+//        
+//        int divNum = (int)nums % 23;
+//        
+//        String[] letras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+//        
+//        String res = letras[divNum];
+//        
+//        return res;
+//    }
 
     @Override
     public int compareTo(Empleado o) {
         return this.NIF.compareToIgnoreCase(o.NIF);
     }
+    
+    public abstract void sueldo();
+    
 }

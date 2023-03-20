@@ -4,7 +4,8 @@
  */
 package museo;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,14 +16,79 @@ public class Museo {
 
     private String nombre;
     private String direccion;
-    private Set<Empleado> empleado;
-    
-    
-    
+    private List<Empleado> empleado;
+    private List<Sala> sala;
 
-    
-    public Set<Empleado> contratar(){
-        
+    public Museo(String nombre, String direccion, List<Empleado> empleado, List<Sala> sala) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.empleado = empleado;
+        this.sala = sala;
+    }       
+
+    public String getNombre() {
+        return nombre;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public List<Empleado> getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(List<Empleado> empleado) {
+        this.empleado = empleado;
+    }
+
+    public List<Sala> getSala() {
+        return sala;
+    }
+
+    public void setSala(List<Sala> sala) {
+        this.sala = sala;
+    }
+    
+    public List<Empleado> contratar(Empleado e){
+        List<Empleado> empleado = new ArrayList();
+        
+        empleado.add(e);
+        
+        return empleado;
+    }
+    
+    public List<Empleado> despedir(String nif){
+        List<Empleado> empleado = new ArrayList();
+        
+        empleado.remove(empleado.contains(nif));
+        
+        return empleado;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

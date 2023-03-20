@@ -11,11 +11,11 @@ package museo;
 final class Vigilante extends Empleado{
     private String puesto;
 
-    public Vigilante(String puesto, String nombre) {
-        super(nombre);
+    public Vigilante(String puesto, String nombre, String nif) {
+        super(nombre, nif);
         this.puesto = puesto;
     }
-
+    
     public String getPuesto() {
         return puesto;
     }

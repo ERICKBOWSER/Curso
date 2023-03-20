@@ -18,3 +18,13 @@ import java.util.Comparator;
 //    }
 //    
 //}
+public class CriterioPeso implements Comparator<Silla>{ // Clase que esta implementado la clase comparator
+
+    
+    
+    @Override
+    public int compare(Silla o1, Silla o2) {
+        return Double.compare(o1.peso, o2.peso);
+    }
+    
+}

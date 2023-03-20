@@ -12,11 +12,11 @@ final class Monitor extends Empleado {
     
     private String Puesto;
 
-    public Monitor(String Puesto, String nombre) {
-        super(nombre);
+    public Monitor(String Puesto, String nombre, String nif) {
+        super(nombre, nif);
         this.Puesto = Puesto;
     }
-
+    
     public String getPuesto() {
         return Puesto;
     }

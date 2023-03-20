@@ -10,12 +10,11 @@ package museo;
  */
 public abstract class Sensor {
     private int id;
+    private double medicion;
 
     public Sensor(int id) {
         this.id = id;
     } 
-    
-    public abstract String alarma();
 
     public int getId() {
         return id;
@@ -24,4 +23,14 @@ public abstract class Sensor {
     public void setId(int id) {
         this.id = id;
     }
+
+    public double getMedicion() {
+        return medicion;
+    }
+
+    public void setMedicion(double medicion) {
+        this.medicion = medicion;
+    }
+    
+    public abstract void alarma(double medicion);
 }
