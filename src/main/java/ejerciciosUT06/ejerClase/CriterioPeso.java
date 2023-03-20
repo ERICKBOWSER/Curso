@@ -10,11 +10,11 @@ import java.util.Comparator;
  *
  * @author guerig
  */
-public class CriterioPeso implements Comparator<Silla>{
-
-    @Override
-    public int compare(Silla o1, Silla o2) {
-        return Double.compare(o1.peso, o2.peso);
-    }
-    
-}
+//public class CriterioPeso implements Comparator<Silla>{
+//
+//    @Override
+//    public int compare(Silla o1, Silla o2) {
+//        return Double.compare(o1.peso, o2.peso);
+//    }
+//    
+//}
