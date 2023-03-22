@@ -11,9 +11,12 @@ package museo;
 final class Fijo extends Sala{
     private String estado;
 
-    public Fijo(int codIndentificador, int numSalas, String nombre) {
-        super(codIndentificador, numSalas, nombre);
+    public Fijo(String estado, int codIndentificador, String nombre, TipoSala tipo, Obra obra) {
+        super(codIndentificador, nombre, tipo, obra);
+        this.estado = estado;
     }
+
+
 
     public String getEstado() {
         return estado;

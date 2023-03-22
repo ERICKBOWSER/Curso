@@ -8,13 +8,15 @@ package museo;
  *
  * @author ERICK
  */
-public abstract class Obra {
+public class Obra {
     private int id;
     private String nombre;
+    private TipoObras tipo;
 
-    public Obra(int id, String nombre) {
+    public Obra(int id, String nombre, TipoObras tipo) {
         this.id = id;
         this.nombre = nombre;
+        this.tipo = tipo;
     }
 
     public int getId() {
@@ -32,6 +34,16 @@ public abstract class Obra {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public TipoObras getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoObras tipo) {
+        this.tipo = tipo;
+    }
+    
+    
     
     
 }

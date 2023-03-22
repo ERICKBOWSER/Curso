@@ -6,7 +6,6 @@ package museo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 /**
  *
@@ -74,7 +73,21 @@ public class Museo {
         return empleado;
     }
     
+    public List<Sala> añadirSala(Sala s){
+        List<Sala> addSalas = new ArrayList();
+        
+        addSalas.add(s);
+        
+        return addSalas;
+    }
     
+    public List<Sala> quitarSala(int id){
+        List<Sala> removeSalas = new ArrayList();
+        
+        sala.remove(sala.contains(id));
+        
+        return removeSalas;
+    }
     
     
     

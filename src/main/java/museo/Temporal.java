@@ -13,12 +13,12 @@ import java.time.LocalDate;
     private LocalDate fechaIni;
     private LocalDate fechaFin;
 
-    public Temporal(LocalDate fechaIni, LocalDate fechaFin, int codIndentificador, int numSalas, String nombre) {
-        super(codIndentificador, numSalas, nombre);
+    public Temporal(LocalDate fechaIni, LocalDate fechaFin, int codIndentificador, String nombre, TipoSala tipo, Obra obra) {
+        super(codIndentificador, nombre, tipo, obra);
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
     }
-
+    
     public LocalDate getFechaIni() {
         return fechaIni;
     }

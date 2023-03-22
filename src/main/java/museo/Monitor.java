@@ -4,25 +4,21 @@
  */
 package museo;
 
+import java.time.LocalTime;
+
 /**
  *
  * @author ERICK
  */
-final class Monitor extends Empleado {
-    
-    private String Puesto;
+public final class Monitor extends Empleado {
 
-    public Monitor(String Puesto, String nombre, String nif) {
-        super(nombre, nif);
-        this.Puesto = Puesto;
+    public Monitor(String NIF, String nombre, LocalTime horas) {
+        super(NIF, nombre, horas);
     }
     
-    public String getPuesto() {
-        return Puesto;
-    }
-
-    public void setPuesto(String Puesto) {
-        this.Puesto = Puesto;
+    
+    public void modificarHoras(LocalTime horas){
+        super.horas = horas;
     }
     
     

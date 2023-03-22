@@ -4,26 +4,20 @@
  */
 package museo;
 
+import java.time.LocalTime;
+
 /**
  *
  * @author ERICK
  */
-final class Vigilante extends Empleado{
-    private String puesto;
+public final class Vigilante extends Empleado{
 
-    public Vigilante(String puesto, String nombre, String nif) {
-        super(nombre, nif);
-        this.puesto = puesto;
-    }
-    
-    public String getPuesto() {
-        return puesto;
+    public Vigilante(String NIF, String nombre, LocalTime horas) {
+        super(NIF, nombre, horas);
     }
 
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
+    public void modificarHoras(LocalTime horas){
+        super.horas = horas;
     }
-
-        
-        
+               
 }

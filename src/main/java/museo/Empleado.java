@@ -4,8 +4,8 @@
  */
 package museo;
 
+import java.time.LocalTime;
 import java.util.Objects;
-import java.util.Random;
 
 /**
  *
@@ -15,12 +15,14 @@ public abstract class Empleado implements Comparable<Empleado>{
     
     private final String NIF;
     private String nombre;
+    public LocalTime horas;   
 
-    public Empleado(String nombre, String nif) {
-        this.NIF = nif;
+    public Empleado(String NIF, String nombre, LocalTime horas) {
+        this.NIF = NIF;
         this.nombre = nombre;
+        this.horas = horas;
     }
-
+   
     public String getNombre() {
         return nombre;
     }
@@ -71,6 +73,6 @@ public abstract class Empleado implements Comparable<Empleado>{
         return this.NIF.compareToIgnoreCase(o.NIF);
     }
     
-    public abstract void sueldo();
+    public abstract void modificarHoras(LocalTime horas);
     
 }
