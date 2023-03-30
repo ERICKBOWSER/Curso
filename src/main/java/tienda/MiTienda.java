@@ -10,6 +10,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  *
@@ -98,8 +102,22 @@ public class MiTienda {
         System.out.println(librosOrdenados);
         
         
+        // Mapear un Integer a un String.
+        Function <Integer, String> funcion = x -> "Tú número es " + x;        
+        System.out.println(funcion.apply(5));
+
+        // Se pasa un objeto Integer y se comprueba si es mayor que 
+        // la condición que tiene el predicado
+        Predicate<Integer> predicado = x -> x > 5;
+        System.out.println(predicado.test(6));
         
         
+        Consumer<String> consumidor = nombre -> System.out.println("Tú nombre es " + nombre);
+        consumidor.accept("Jake");
+        
+        
+        Supplier<Double> proveedor = () -> Math.random();
+        System.out.println(proveedor.get());
         
     }
 }
