@@ -14,9 +14,9 @@ import java.util.regex.Pattern;
 public class Cumplir {
     /*Cumplir ini 2 números fin*/
     public static void main(String[] args) {
-        String regex = "^ini[0-9]{2}fin";
+        String regex = "ini[0-9]{2}fin";
         
-        String cumplir = "fjalsdfñl";
+        String cumplir = "ini58fin";
         
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(cumplir);

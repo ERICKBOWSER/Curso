@@ -10,6 +10,9 @@ package expresionesRegulares;
  */
 public class LetraNumero {
     /*
-    letraNumero tantas veces como se quiera 
-    */
+    letraNumero tantas veces como se quiera*/
+    
+    public static void main(String[] args) {
+        final String regex = "([a-zA-Z][0-9])+";
+    }
 }

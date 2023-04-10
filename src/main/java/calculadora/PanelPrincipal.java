@@ -24,7 +24,9 @@ public class PanelPrincipal extends JPanel implements ActionListener{ // ActionL
     private JTextArea areaTexto;
     private int tipoOperacion;
     
-    private ArrayList<String> datos = new ArrayList();
+    private int contador = 0;
+    
+    //private ArrayList<String> datos = new ArrayList();
     
     public PanelPrincipal(){
         initComponents();
@@ -63,15 +65,21 @@ public class PanelPrincipal extends JPanel implements ActionListener{ // ActionL
         // Objeto que desencadena el evento
         Object o = ae.getSource();
         
-        datos.add((String)o);
+//        double num1 = (double)ae.getSource();
+//        
+//        System.out.println("Num 1:" + num1);
         
-        if(o.equals("=")){
-            for (int i = 0; i < datos.size(); i++) {
-                String res = datos.get(i) + datos.get(i + 1);
-                System.out.println(res);
-                areaTexto.setText(res);
-            }
-        }
+        
+//        datos.add((String)o);
+        
+//        if(o.equals("=")){
+//            for (int i = 0; i < datos.size(); i++) {
+//                String res = datos.get(i) + datos.get(i + 1);
+//                System.out.println(res);
+//                areaTexto.setText(res);
+//            }
+//        }
+        
         
         // Si es un boton
         if(o instanceof JButton){
